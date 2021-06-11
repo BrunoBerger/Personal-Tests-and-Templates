@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figures}
+
+%%%
+%This one we'll need most:
+\begin{figure}[H]
+  \centering\includegraphics[width=0.4\linewidth]{rXUndYStatSem.png}
+  \caption{Abweichung visualisiert\cite{statistikSeminar}}
+  \label{fig:rUndXY}
+\end{figure}
+
+%%%
+% remove \vspace{} for normal placement
+
+\begin{wrapfigure}{l}{0.7\linewidth}
+\includegraphics[width=\linewidth]{./lion-logo.jpg}
+\caption{This is the former Share\LaTeX{} logo}
+\end{wrapfigure}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    \vspace{-25pt}
+  \centering{\includegraphics[width=\linewidth]{triangulation dublin.png}}
+    \vspace{-20pt}
+  \caption{Triangulation \cite{poleTagging}}
+  \label{fig:triang}
+    \vspace{-6pt}
+\end{wrapfigure}
+
+\begin{figure}[!tbp]
+  \centering
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{flower1.jpg}
+    \caption{Flower one.}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.4\textwidth}
+    \includegraphics[width=\textwidth]{flower2.jpg}
+    \caption{Flower two.}
+  \end{minipage}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Footnotes}
+
+% normal looking link in footnote
+\footnote
+    {\href{}
+    {}}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\section{Standard-citation}
+
+@misc{REF,
+  title = {TITLE},
+  author={},
+  organization={},
+  year={},
+  month={01},
+  howpublished = {URL},
+  note = {Accessed: 2020-04-13}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Often used packages}
+
+\usepackage{biblatex}               % citations
+\usepackage{dirtytalk}              % quotation marks 
+\usepackage{float}                  % force image to appear in specific place in text
+\usepackage{graphicx}               % images next to each other
+\usepackage[hidelinks]{hyperref}    % better hyperlinks
+\usepackage{minted}                 % Code linting
+\usepackage{multirow}               % cells that span multiple rows in tables
+\usepackage{wrapfig}                % embed images into text
+
+\addbibresource{bibfile.bib}
+\graphicspath{{Figures/}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{List of footnotes}
+
+\newcommand{\listfootnotesname}{\Large List of Footnotes}% 'List of Footnotes' title 
+\newlistof{footnotes}{fnt}{\listfootnotesname}% New 'List of...' for footnotes 
+\let\oldfootnote\footnote % Save the old \footnote{...} command 
+\renewcommand\footnote[1]{% Redefine the new footnote to also add 'List of Footnote' entries. 
+    \refstepcounter{footnotes}% Add and step a reference to the footnote/counter. 
+    \oldfootnote{#1}% Make a regular footnote. 
+    \addcontentsline{fnt}{footnotes}{\protect 
+\numberline{\thefootnotes}#1}% Add the 'List of...' entry. 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Author-Credits}
+
+% put in section-name to indicate author:
+\hfill\textnormal{\emph{Name}}
+
+% after paragraph if multiple people worked on one section:
+\begin{flushright}
+\emph{name}
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SubSubSub...-Sections}
+
+https://tex.stackexchange.com/questions/186981/is-there-a-subsubsubsection-command
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Subtitle (quickNdirty)}
+
+\title{Deep Learning 2 - Project\\
+    \vspace{+14pt}
+        \Large Interaktionstechnik und Design \\
+        HSHL  Sommersemester 2020}
+\author{Bruno Berger, MatrNr: 2170706}
+\date{22. 06. 2020}
