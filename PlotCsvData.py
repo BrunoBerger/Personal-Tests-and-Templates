@@ -4,6 +4,7 @@ import csv
 frameTimes = []
 with open("data.csv", "r") as frames:
     reader = csv.reader(frames, delimiter=',')
+    next(reader, None)  # skip the headers
     for row in reader:
         frameTimes.append(float(row[1]))
 
