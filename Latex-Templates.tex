@@ -1,4 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Style}
+\pagenumbering{gobble} % remove pagenumbering
+\usepackage[doublespacing]{setspace} % singlespacing / onehalfspacing / doublespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Figures}
 
 %%%
@@ -65,7 +70,7 @@
 \section{Often used packages}
 
 \usepackage{biblatex}               % citations
-\usepackage{dirtytalk}              % quotation marks 
+\usepackage{dirtytalk}              % quotation marks
 \usepackage{float}                  % force image to appear in specific place in text
 \usepackage{graphicx}               % images next to each other
 \usepackage[hidelinks]{hyperref}    % better hyperlinks
@@ -79,14 +84,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{List of footnotes}
 
-\newcommand{\listfootnotesname}{\Large List of Footnotes}% 'List of Footnotes' title 
-\newlistof{footnotes}{fnt}{\listfootnotesname}% New 'List of...' for footnotes 
-\let\oldfootnote\footnote % Save the old \footnote{...} command 
-\renewcommand\footnote[1]{% Redefine the new footnote to also add 'List of Footnote' entries. 
-    \refstepcounter{footnotes}% Add and step a reference to the footnote/counter. 
-    \oldfootnote{#1}% Make a regular footnote. 
-    \addcontentsline{fnt}{footnotes}{\protect 
-\numberline{\thefootnotes}#1}% Add the 'List of...' entry. 
+\newcommand{\listfootnotesname}{\Large List of Footnotes}% 'List of Footnotes' title
+\newlistof{footnotes}{fnt}{\listfootnotesname}% New 'List of...' for footnotes
+\let\oldfootnote\footnote % Save the old \footnote{...} command
+\renewcommand\footnote[1]{% Redefine the new footnote to also add 'List of Footnote' entries.
+    \refstepcounter{footnotes}% Add and step a reference to the footnote/counter.
+    \oldfootnote{#1}% Make a regular footnote.
+    \addcontentsline{fnt}{footnotes}{\protect
+\numberline{\thefootnotes}#1}% Add the 'List of...' entry.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
