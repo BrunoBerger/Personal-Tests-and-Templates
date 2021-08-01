@@ -1,10 +1,13 @@
-# personalTests
+# Personal tests and templates
 
 #### Misc:
-- Search String in files in pws: ```Get-ChildItem -Recurse | Select-String "dummy" -List | Select Path```
+- Search String in files in PWS: ```Get-ChildItem -Recurse -Exclude *.bmp,*.pdf | Select-String "todo" -List | Select Path, LineNumber, Line```
 - Image conversion: ```D:\ImageMagick-7.1.0-Q16-HDRI\convert.exe .\mandlebrot.ppm new.png```
-- Python as single exe: ```pyinstaller -F file.py```
-- Python requirements: ```pipreqs ./ --encoding=utf8 --force```
+
+#### Python:
+- Pack as single exe: ```pyinstaller -F main.py```
+- Requirements w/o virtualenv: ```pipreqs ./ --encoding=utf8 --force```
+- Style- and error-check: ```flake8``` & ```pylint .\main.py```
 
 #### Markdown-Tricks:
 
