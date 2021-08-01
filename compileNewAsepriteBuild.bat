@@ -1,9 +1,17 @@
-# 64 bit build of main branch
-
-# TODO delete/make backup of old build
+:: 64 bit build of main branch
+d:
+cd D:\gitHub_programs
+robocopy aseprite\build\bin backups\asepritebackup /E /PURGE
+cd aseprite
 git pull
 git submodule update --init --recursive
+rmdir /S /Q build
+mkdir build
 cd build
-call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat" -arch=x86
-cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia -DSKIA_DIR=C:\Users\brube\github\_deps\skia -DSKIA_LIBRARY_DIR=C:\Users\brube\github\_deps\skia\out\Release-x86 -DSKIA_LIBRARY=C:\Users\brube\github\_deps\skia\out\Release-x86\skia.lib -G Ninja ..
+call "D:\visualStudio\Common7\Tools\VsDevCmd.bat" -arch=x64
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=D:\gitHub_programs\Skia-Windows-Release-x64 -DSKIA_LIBRARY_DIR=D:\gitHub_programs\Skia-Windows-Release-x64\out\Release-x64 -DSKIA_LIBRARY=D:\gitHub_programs\Skia-Windows-Release-x64\out\Release-x64\skia.lib -G Ninja ..
 ninja aseprite
+c:
+cd C:\Users\Bruno\github\Personal-Tests-and-Templates
+echo [DONE]
+pause
