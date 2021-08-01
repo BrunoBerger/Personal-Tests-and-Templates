@@ -1,8 +1,8 @@
 # Personal tests and templates
 
 #### Misc:
-- Search String in files in PWS: ```Get-ChildItem -Recurse -Exclude *.bmp,*.pdf | Select-String "todo" | Select Path, LineNumber, Line```
-  ##### Options:
+- Search String in files in PWS: ```Get-ChildItem -Recurse -Exclude *.bmp,*.pdf | Select-String "todo" | Select Path, LineNumber, Line```  
+  Options:
   - Get-ChildItem:  ```Include *.* -Exclude *.pdf,*.dll``` *Filter*
   - Select-String:  ```-Context 1, 2``` *Also show surrounding lines*
   - Select-String:  ```-List``` *Only show file once, even with multiple matches*
@@ -16,23 +16,21 @@
 
 #### Markdown-Tricks:
 
-- Code block with linting
+- Code block with linting and copy-button
 ```Java
 System.out.println("Hello World!");
-```
-- Codeblock with added copy button
-```Python Console
-print("Hello World")
 ```
 
 <details>
 <summary>Expanding List</summary>
 
-- [About](#about)
-- [Usage](#usage)
-  * [API](#api)
-- [Transforms](#transforms)
-  1. [CODE](#code)
-  2. [REMOTE](#remote)
+- Here is a hidden Comment <!-- Comment -->
+- Basic Stuff:
+  * \*\*Bold\*\* → **Bold**
+  * \*italic\* → *italic*
+  * \~strikethrough\~ → ~strikethrough~
+- [Can be a link](http://www.example.com)
+  1. [x] Todo
+  2. [ ] List
 
 </details>
