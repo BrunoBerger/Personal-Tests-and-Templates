@@ -101,9 +101,17 @@
 \hfill\textnormal{\emph{Name}}
 
 % after paragraph if multiple people worked on one section:
+% \vfill % add to place text on bottom
 \begin{flushright}
 \emph{name}
 \end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table of contents}
+
+ % place in text for new page in TOC
+\addtocontents{toc}{\protect\newpage}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SubSubSub...-Sections}

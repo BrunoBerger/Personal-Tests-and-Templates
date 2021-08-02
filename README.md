@@ -1,9 +1,9 @@
 # Personal tests and templates
 
 #### Misc:
-- Search String in files in PWS: ```Get-ChildItem -Recurse -Exclude *.bmp,*.pdf | Select-String "todo" | Select Path, LineNumber, Line```  
+- Search String in files in PWS: ```Get-ChildItem -Recurse -Exclude *.bmp,*.pdf | Select-String "todo" | Select Path, LineNumber, Line```<br>
   Options:
-  - Get-ChildItem:  ```Include *.* -Exclude *.pdf,*.dll``` *Filter*
+  - Get-ChildItem:  ```-Include *.* -Exclude *.pdf,*.dll``` *Filter*
   - Select-String:  ```-Context 1, 2``` *Also show surrounding lines*
   - Select-String:  ```-List``` *Only show file once, even with multiple matches*
   - ``` | Out-File search_out.txt``` *divert output to file*
@@ -13,6 +13,10 @@
 - Pack as single exe: ```pyinstaller -F main.py```
 - Requirements w/o virtualenv: ```pipreqs ./ --encoding=utf8 --force```
 - Style- and error-check: ```flake8``` & ```pylint .\main.py```
+
+#### Git:
+ - ```git remote -v``` See all sources
+ - ```git TODO``` Remove files that are now ignored
 
 #### Markdown-Tricks:
 
