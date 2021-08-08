@@ -17,6 +17,7 @@
 #### Git:
  - ```git remote -v``` See all sources
  - ```git TODO``` Remove files that are now ignored
+ - ```git mv .\Implementation\KnownFaces\bruno.bmp .\Implementation\KnownFaces\Bruno.bmp``` make git notice the switch to uppercase
 
 #### Markdown-Tricks:
 
