@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
-        Vector3 move = (transform.right*horizontal + transform.forward*vertical).normalised;
+        Vector3 move = (transform.right*horizontal + transform.forward*vertical).normalized;
         move.y = move.y*gravityPull;
         if (move.magnitude >= 0.1f)
         {
