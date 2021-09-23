@@ -11,6 +11,7 @@
 
 #### Misc
 - Image conversion: ```D:\ImageMagick-7.1.0-Q16-HDRI\convert.exe .\mandlebrot.ppm new.png```
+- Get only+best audio from yt-url: ``` youtube-dl -x --audio-format mp3 ULR_HERE```
 
 #### Python
 - Pack as single exe: ```pyinstaller -F main.py```
