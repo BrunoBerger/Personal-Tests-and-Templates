@@ -8,6 +8,7 @@
   - Select-String:  ```-List``` *Only show file once, even with multiple matches*
   - ``` | Out-File search_out.txt``` *divert output to file*
 - ``` | clip.exe ``` pipe output into clipboard
+- ``` pwd | Select-Object -ExpandProperty "Path" ``` get value of an objects property by name
 
 #### Misc
 - Image conversion: ```D:\ImageMagick-7.1.0-Q16-HDRI\convert.exe .\mandlebrot.ppm new.png```

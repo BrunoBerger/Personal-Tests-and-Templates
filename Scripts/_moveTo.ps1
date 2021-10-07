@@ -14,7 +14,7 @@ if ($paths.Count -eq 1)
 $i=1
 foreach ($path in $paths)
 {
-  "$i => $path"
+  " $i => $path"
   $i = $i+1
 }
 $selection = (Read-Host "Selection")-1
