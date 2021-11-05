@@ -7,7 +7,7 @@
 \section{Figures}
 
 %%%
-%This one we'll need most:
+%Standard figure:
 \begin{figure}[H]
   \centering\includegraphics[width=0.4\linewidth]{rXUndYStatSem.png}
   \caption{Abweichung visualisiert\cite{statistikSeminar}}
@@ -15,7 +15,7 @@
 \end{figure}
 
 %%%
-% remove \vspace{} for normal placement
+\subsection{Wrapfigure}
 
 \begin{wrapfigure}{l}{0.7\linewidth}
   \includegraphics[width=\linewidth]{./lion-logo.jpg}
@@ -32,6 +32,9 @@
     \vspace{-6pt}
 \end{wrapfigure}
 
+\subsection{Multiple figures}
+
+% Standard
 \begin{figure}[!tbp]
   \centering
   \begin{minipage}[b]{0.4\textwidth}
@@ -45,6 +48,26 @@
   \end{minipage}
 \end{figure}
 
+% With subcaptions (a,b) and same space to each other and to the sides
+\begin{figure}[H]
+\centering
+    \hspace*{\fill}%
+    \begin{subfigure}[b]{0.525\textwidth}
+            \includegraphics[width=\textwidth]{Figures/FromPW/A_ElderlyStartsCall-ColouredAndCompressed.jpg}
+            \caption{An elderly starts a  call}
+            \label{fig:A_ElderlyStartsCall}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[b]{0.455\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{Figures/FromPW/A_RelativeStartsCall-ColouredAndCompressed.jpg}
+            \caption{Relative starts a  call}
+            \label{fig:A_RelativeStartsCall}
+    \end{subfigure}
+    \hspace*{\fill}%
+    \caption{Activity diagrams from the project work \cite{projectwork}}
+    \label{fig:Activites-from-PW}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Footnotes}
