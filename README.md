@@ -22,7 +22,7 @@
 
 #### Git
  - ```git remote -v``` See all sources
- - TODO: ``` ``` Remove files that are now ignored
+ - ```git rm -r --cached <folder>``` Remove folder that is are now ignored (remove '-r' for only files)
  - ```git log --graph --oneline -n 10``` condensed log
  - ```git mv .\Implementation\KnownFaces\bruno.bmp .\Implementation\KnownFaces\Bruno.bmp``` make git notice the switch to uppercase
 
