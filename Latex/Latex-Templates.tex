@@ -9,10 +9,23 @@
 %%%
 %Standard figure:
 \begin{figure}[H]
-  \centering\includegraphics[width=0.4\linewidth]{rXUndYStatSem.png}
+  \centering
+  \includegraphics[width=0.4\linewidth]{rXUndYStatSem.png}
   \caption{Abweichung visualisiert\cite{statistikSeminar}}
   \label{fig:rUndXY}
 \end{figure}
+
+\subsection{Double Column}
+
+% For spanning a single column:
+\begin{figure}[tbp]
+	\centering\includegraphics[width=1.0\columnwidth]{example.png}
+\end{figure}
+
+% For spanning the whole page:
+\begin{figure*}[tbp]
+	\centering\includegraphics[width=1.0\textwidth]{example.png}
+\end{figure*}
 
 %%%
 \subsection{Wrapfigure}
@@ -72,10 +85,29 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Footnotes}
 
-% normal looking link in footnote
+\subsection{normal looking link in footnote}
+
 \footnote
     {\href{}
     {}}
+
+\subsection{To reference the same footnote multiple times}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+% Use like this:
+\footnote{\label{MyLabel}MyFootnote}
+\footnoteref{MyLabel}
+
+\subsection{Decouple the ref in the text vs the actual footnote}
+% Source: https://tex.stackexchange.com/questions/674175/how-to-make-a-footnote-appear-on-the-left-column
+
+% Place this rougly where the footnote should end up
+\footnotetext[\numexpr \value{footnote}+1\relax]{Test footnote B}
+
+% where normally \footnote{} would be:
+\footnotemark
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Standard-citation}
