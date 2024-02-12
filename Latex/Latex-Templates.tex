@@ -168,11 +168,17 @@
  % place in text for new page in TOC
 \addtocontents{toc}{\protect\newpage}
 
+% To remove self-reference in toc
+% may need to adjust the second number
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\tableofcontents
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SubSubSub...-Sections}
 
-https://tex.stackexchange.com/questions/186981/is-there-a-subsubsubsection-command
+% https://tex.stackexchange.com/questions/186981/is-there-a-subsubsubsection-command
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
