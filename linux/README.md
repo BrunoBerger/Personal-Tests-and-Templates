@@ -1,7 +1,8 @@
-# PI-Stuff
+# Linux 
 
-Files and notes for setting up my raspberry-pi
 
-#### Misc:
+***
+
+### raspberry-pi misc:
 - ```sudo pkill -f "JMusicBot"``` kill all processes that contain that string
 - ```sudo update-alternatives --config python``` switch py-version
