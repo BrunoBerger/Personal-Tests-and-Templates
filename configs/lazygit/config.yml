@@ -1,0 +1,27 @@
+# lazygit configuration file
+# Put in PATH:
+# %LOCALAPPDATA%\lazygit\
+# or
+# ~/.config/lazygit/
+
+git:
+  # Command used when displaying the current branch git log in the main window
+  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --oneline --
+
+keybinding:
+  universal:
+    # togglePanel: <tab>
+    # prevItem: <up>
+    # nextItem: <down>
+    # rangeSelectDown: <s-down>
+    # rangeSelectUp: <s-up>
+    # prevBlock: <left>
+    # nextBlock: <right>
+    prevBlock: ''
+    nextBlock: ''
+    # scrollUpMain: <pgup>
+    # scrollDownMain: <pgdown>
+    # nextTab: ']'
+    # prevTab: '['
+    nextTab: <right>
+    prevTab: <left>
